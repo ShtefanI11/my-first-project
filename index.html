@@ -30,7 +30,7 @@
  
     if (!login.value) alert('Заполните поле "Логин"');
     else if (!email.value) alert('Заполните поле "Майл"');
-    else alert(`Добро пожаловать, "Name":"${login.value}" "Email":"${email.value}"!`);
+    else alert(`Добро пожаловать, {"name":"${login.value}", "email":"${email.value}"}!`);
 }
  
 document.querySelector('.enterb').addEventListener('click', welcome);
