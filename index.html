@@ -15,13 +15,26 @@
         <br>
         <hr>
         <h5>Написать отзыв.</h5>
-        <form name="text" action="text/javascript">
-        <script type="text/javascript">
-          onclick="alert('1')" 
-        </script>
-          <input type="submit" name="Отправить" onclick="alert ('name:IZI;email:Legko')">
-          <input type="email" name="email">
-          </form>
+        <div class="login-menu">
+         <form>
+         <input size="10" class="login" id="login" placeholder="Логин">
+         <input size="10" class="pass" id="password" placeholder="Пароль">
+         <input class="enterb" type="button" value="Войти">
+          <br>
+            </form>
+          </div>
+          <script type="text/javascript">
+            const welcome = () => {
+    let login = document.querySelector('.login');
+    let pass = document.querySelector('.pass');
+ 
+    if (!login.value) alert('Заполните поле "Логин"');
+    else if (!pass.value) alert('Заполните поле "Пароль"');
+    else alert(`Добро пожаловать, ${login.value}!`);
+}
+ 
+document.querySelector('.enterb').addEventListener('click', welcome);
+           </script>
       <input type="reset" value="Reset form">
       <br>
       <br>
