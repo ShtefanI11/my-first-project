@@ -18,7 +18,7 @@
         <div class="login-menu">
          <form>
          <input size="10" class="login" id="login" placeholder="Логин">
-         <input size="10" class="pass" id="password" placeholder="Пароль">
+         <input size="10" class="email" id="email" placeholder="Майл">
          <input class="enterb" type="button" value="Войти">
           <br>
             </form>
@@ -26,11 +26,11 @@
           <script type="text/javascript">
             const welcome = () => {
     let login = document.querySelector('.login');
-    let pass = document.querySelector('.pass');
+    let email = document.querySelector('.email');
  
     if (!login.value) alert('Заполните поле "Логин"');
-    else if (!pass.value) alert('Заполните поле "Пароль"');
-    else alert(`Добро пожаловать, ${login.value}!`);
+    else if (!email.value) alert('Заполните поле "Майл"');
+    else alert(`Добро пожаловать, ${login.value} ${email.value}!`);
 }
  
 document.querySelector('.enterb').addEventListener('click', welcome);
