@@ -15,25 +15,19 @@
         <br>
         <hr>
         <h5>Написать отзыв.</h5>
-        <div class="login-menu">
          <form>
-         <input size="10" class="login" id="login" placeholder="Имя">
-         <input size="10" class="email" id="email" placeholder="Майл">
-         <input class="enterb" type="button" value="Войти">
-          <br>
-            </form>
-          </div>
-          <script type="text/javascript">
-            const welcome = () => {
-    let login = document.querySelector('.login');
-    let email = document.querySelector('.email');
- 
-    if (!login.value) alert('Заполните поле "Логин"');
-    else if (!email.value) alert('Заполните поле "Майл"');
-    else alert(`Добро пожаловать, {"name":"${login.value}", "email":"${email.value}"}!`);
+<input type="text"  id="c" placeholder="Имя"/>
+<input type="text"  id="d" placeholder="Майл"/>
+<input type="button" onclick="swapValues()" value="Swap">
+        <br>
+        </form>
+        <script type="text/javascript">
+            function swapValues(){
+var tmp = document.getElementById("c").value;
+document.getElementById("c").value = document.getElementById("d").value;
+document.getElementById("d").value = tmp;
+
 }
- 
-document.querySelector('.enterb').addEventListener('click', welcome);
            </script>
       <input type="reset" value="Reset form">
       <br>
