@@ -22,7 +22,8 @@
         </form>
         <script type="text/javascript">
             function swapValue(){
-              document.getElementById("click").value =document.getElementById("Time_block").innerHTML;
+              document.getElementById("click").value =document.getElementById("copy").innerHTML;
+              document.getElementById("copy").innerHTML = date_time();
             }
      
             function zero_first_format(value)
@@ -46,9 +47,6 @@
 
         return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
     }
-          setInterval(function () {
-        document.getElementById('Time_block').innerHTML = date_time();
-    }, 1000);  
             
             
            </script>
@@ -57,14 +55,13 @@
       <br>
       <input type="file" multiple>
       <hr>
-      <div id="Time_block"></div>
       <br>
       <a href="my_photos.html">Доп фото Рокфеллер.Д.Д</a>
       <footer>
          <a href="https://www.wikiwand.com/ru/%D0%A0%D0%BE%D0%BA%D1%84%D0%B5%D0%BB%D0%BB%D0%B5%D1%80,_%D0%94%D0%B6%D0%BE%D0%BD_%D0%94%D1%8D%D0%B2%D0%B8%D1%81%D0%BE%D0%BD" target="_blank">Источник</a>
          <br>
          <a href="mailto:shtefan.i333@gmail.com" target="_blank">My e-mail</a>
-         <div id="copy"><p align="right">Статья написана 30.03.21 Shtefan.I.D(c)</p></div>
+         <p align="right" id="copy">Статья написана 30.03.21 Shtefan.I.D(c)</p>
       </footer>
    </body>
    </html>
