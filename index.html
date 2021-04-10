@@ -18,16 +18,16 @@
          <form>
 <input type="text"  id="c" placeholder="Имя"/>
 <input type="text"  id="d" placeholder="Майл"/>
-<input type="button" onclick="swapValues()" value="Swap">
+<input type="button" onclick="swapValues()" id="click" value="Swap">
         <br>
         </form>
         <script type="text/javascript">
             function swapValues(){
-var tmp = document.getElementById("c").value;
-document.getElementById("c").value = document.getElementById("d").value;
-document.getElementById("d").value = tmp;
-
-}
+              document.getElementById("click").value =document.getElementById("Try").value;
+              
+            }
+            document.write(Date());
+            while
            </script>
       <input type="reset" value="Reset form">
       <br>
@@ -40,7 +40,7 @@ document.getElementById("d").value = tmp;
          <a href="https://www.wikiwand.com/ru/%D0%A0%D0%BE%D0%BA%D1%84%D0%B5%D0%BB%D0%BB%D0%B5%D1%80,_%D0%94%D0%B6%D0%BE%D0%BD_%D0%94%D1%8D%D0%B2%D0%B8%D1%81%D0%BE%D0%BD" target="_blank">Источник</a>
          <br>
          <a href="mailto:shtefan.i333@gmail.com" target="_blank">My e-mail</a>
-         <p align="right">Статья написана 30.03.21 Shtefan.I.D(c)</p>
+         <p align="right" id="Try">Статья написана 30.03.21 Shtefan.I.D(c)</p>
       </footer>
    </body>
    </html>
