@@ -6,8 +6,42 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>http</title>
       <link rel="stylesheet" href="text.css">
+      <style>
+          @-webkit-keyframes flash {
+    0%, 100% {opacity: 10;} 
+    50% {opacity: -0;}
+   }
+   @-moz-keyframes flash {
+    0%, 100% {opacity: 10;} 
+    50% {opacity: -0;}
+   }
+   @-o-keyframes flash {
+    0%, 100% {opacity: 1;} 
+    50% {opacity: -0;}
+   }
+   @keyframes flash {
+    0%, 100% {opacity: 1;} 
+    50% {opacity: -0;}
+   }
+   .flash { border: 4px dashed black;
+    -webkit-animation-name: flash;
+    -moz-animation-name: flash;
+    -o-animation-name: flash;
+    animation-name: flash;
+    /* Задержка перед началом */
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+    /* Продолжительность анимации */
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+   }
+      </style>
    </head>
-   <body>
+   <body id="de">
         <h1>Биография Рокфеллер Д.Д</h1>
         <p>Рокфеллер был вторым ребёнком из шести детей в семье протестантов Уильяма Эвери Рокфеллера (13 октября 1810 — 11 мая 1906) и Луизы Дэвисон (12 сентября 1813 — 28 марта 1889)[22][23]. Отец имел англо-немецкое происхождение, мать - шотландско-ирландское. Родился он в городе Ричфорд, штат Нью-Йорк. Его отец был сначала лесорубом, а потом странствующим торговцем, называвшим себя «ботаническим доктором» и продававшим различные эликсиры и редко бывавшим дома[24]. По воспоминаниям соседей, отца Джона считали странным человеком, старающимся уклониться от тяжёлого физического труда, хотя и имеющим хорошее чувство юмора. По натуре Уильям был склонным к риску человеком, что помогло ему нарастить тот небольшой капитал, который позволил ему купить земельный участок за 3100 долларов. Однако склонность к риску соседствовала с предусмотрительностью, поэтому часть капиталов была вложена в различные предприятия.</p>
         <hr>
@@ -15,17 +49,52 @@
         <br>
         <hr>
         <h5>Написать отзыв.</h5>
-         <form>
-<input type="text"  id="c" placeholder="Имя"/>
-<input type="text"  id="d" placeholder="Майл"/>
-<input type="button" onclick="swapValue()" id="click" value="Swap">
+         <form id="form">
+<input type="text" class="flash" id="name" placeholder="Имя"/>
+<input type="mail" id="d" placeholder="Майл"/>
+<input type="submit" id="click" value="Отправить">
         </form>
+        <div id="name" style="display:none;"></div>
+        <div id="click"></div>
         <script type="text/javascript">
-            function swapValue(){
-              document.getElementById("click").value =document.getElementById("copy").innerHTML;
-              document.getElementById("copy").innerHTML = date_time();
+           const form = document.getElementById('form');
+           const name = document.getElementById('name');
+           const mail = document.getElementById('d');
+            form.onsubmit = function(evt) {
+              evt.preventDefault();
+              if(name.value === 'Костя') {
+                //alert ('Вы не Костя');
+                evt.preventDefault()
+                if (mail.value === '1' || mail.value === '2') {
+                document.getElementById('dell').innerHTML = "";
+                
+                }
+
+              }
             }
-     
+           let x = name('Вася', 'Марина');
+           let y = name2('Андрей', 'Николай');
+           if (x == "Вася") || ("Марина") {
+            alert('Ok')
+            else (y == "Николай");
+           }
+alert('nam21e');
+            function toggle() {
+    var top = document.getElementById("name");
+    var bottom = document.getElementById("click");
+
+    if (top.style.display == "none")
+    {
+        top.style.display = "block";
+        bottom.style.display = "none";
+    }
+    else
+    {
+        top.style.display = "none";
+        bottom.style.display = "block";
+    }
+} 
+
             function zero_first_format(value)
     {
         if (value < 10)
@@ -46,9 +115,8 @@
         let seconds = zero_first_format(current_datetime.getSeconds());
 
         return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
+    
     }
-            
-            
            </script>
       <input type="reset" value="Reset form">
       <br>
